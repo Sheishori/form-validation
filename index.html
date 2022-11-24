@@ -7,5 +7,30 @@
 	<title>Form Validation Example</title>
 </head>
 <body>
+	<form>
+		<ul>
+			<li>
+				<label for="email">E-mail:</label>
+				<input type="email" name="email" id="email" required>
+			</li>
+			<li>
+				<label for="country">Country:</label>
+				<input type="text" name="country" id="country" required>
+			</li>
+			<li>
+				<label for="zip-code">Zip Code:</label>
+				<input type="number" name="zip-code" id="zip-code" required>
+			</li>
+			<li>
+				<label for="password">Password:</label>
+				<input type="password" name="password" id="password" required>
+			</li>
+			<li>
+				<label for="confirm-password">Confirm password:</label>
+				<input type="password" name="confirm-password" id="confirm-password" required>
+			</li>
+		</ul>
+		<button>Submit</button>
+	</form>
 </body>
 </html>
