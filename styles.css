@@ -35,3 +35,8 @@ button {
 form :invalid {
 	border: 1px solid red;
 }
+
+#success {
+	margin-top: 2rem;
+	color: green;
+}

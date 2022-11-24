@@ -4,6 +4,8 @@ const country = document.getElementById('country');
 const zipCode = document.getElementById('zip-code');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
+const button = document.querySelector('button');
+const success = document.getElementById('success');
 const countryRegExp = /[A-Za-z]+$/;
 const zipCodeRegExp = /\d$/;
 const passwordRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{5,}$/;
@@ -71,6 +73,10 @@ zipCode.addEventListener('invalid', checkZipCodeValidity);
 password.addEventListener('invalid', checkPasswordValidity);
 confirmPassword.addEventListener('invalid', checkConfrimPasswordValidity);
 
+button.addEventListener('click', () => {
+	success.textContent = ""
+});
+
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
 	checkEmailValidity();
@@ -78,4 +84,7 @@ form.addEventListener('submit', (event) => {
 	checkZipCodeValidity();
 	checkPasswordValidity();
 	checkConfrimPasswordValidity();
+	if (form.checkValidity()) {
+		success.textContent = "Form successfully submitted!"
+	};
 });
