@@ -59,6 +59,12 @@ zipCode.addEventListener('input', resetValidity);
 password.addEventListener('input', resetValidity);
 confirmPassword.addEventListener('input', resetValidity);
 
+email.addEventListener('blur', checkEmailValidity);
+country.addEventListener('blur', checkCountryValidity);
+zipCode.addEventListener('blur', checkZipCodeValidity);
+password.addEventListener('blur', checkPasswordValidity);
+confirmPassword.addEventListener('blur', checkConfrimPasswordValidity);
+
 email.addEventListener('invalid', checkEmailValidity);
 country.addEventListener('invalid', checkCountryValidity);
 zipCode.addEventListener('invalid', checkZipCodeValidity);
