@@ -31,3 +31,7 @@ button {
 	height: 2rem;
 	margin-top: 2rem;
 }
+
+form :invalid {
+	border: 1px solid red;
+}
