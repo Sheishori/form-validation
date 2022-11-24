@@ -6,8 +6,8 @@ const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 const button = document.querySelector('button');
 const success = document.getElementById('success');
-const countryRegExp = /[A-Za-z]+$/;
-const zipCodeRegExp = /\d$/;
+const countryRegExp = /^[A-Za-z]+$/;
+const zipCodeRegExp = /^\d{2,5}(?:-\d{3,4})?$/;
 const passwordRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[a-zA-Z]).{5,}$/;
 
 function resetValidity() {
